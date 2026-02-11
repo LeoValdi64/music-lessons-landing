@@ -489,12 +489,12 @@ function Recitals() {
         </div>
 
         {/* Event banner */}
-        <div className="mt-12 bg-gradient-to-r from-gold-500 to-gold-400 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-2xl font-bold text-purple-950">
+        <div className="mt-12 bg-gradient-to-r from-gold-500 to-gold-400 rounded-2xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div className="min-w-0">
+            <h3 className="text-xl sm:text-2xl font-bold text-purple-950">
               Next Recital: Spring Concert 2026
             </h3>
-            <p className="text-purple-900 mt-1">
+            <p className="text-purple-900 mt-1 text-sm sm:text-base">
               March 22, 2026 at Schermerhorn Symphony Center, Nashville
             </p>
           </div>
@@ -581,7 +581,7 @@ function Pricing() {
               key={p.name}
               className={`rounded-2xl p-8 transition-all duration-300 ${
                 p.featured
-                  ? "bg-purple-950 text-white shadow-2xl scale-105 border-2 border-gold-400 relative"
+                  ? "bg-purple-950 text-white shadow-2xl lg:scale-105 border-2 border-gold-400 relative"
                   : "bg-white shadow-lg border border-purple-100 hover:shadow-xl"
               }`}
             >
@@ -792,18 +792,18 @@ function RegistrationForm() {
                 {
                   icon: Clock,
                   label: "Hours",
-                  value: "Mon-Fri: 9am-8pm | Sat: 9am-5pm | Sun: 12pm-5pm",
+                  value: "Mon–Fri: 9am–8pm | Sat: 9am–5pm | Sun: 12–5pm",
                 },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-purple-900 flex items-center justify-center shrink-0">
                     <item.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold text-purple-950">
                       {item.label}
                     </p>
-                    <p className="text-purple-700 text-sm">{item.value}</p>
+                    <p className="text-purple-700 text-sm break-words">{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -811,7 +811,7 @@ function RegistrationForm() {
           </div>
 
           {/* Form side */}
-          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-purple-100">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl border border-purple-100">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full text-center py-12">
                 <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
@@ -1041,20 +1041,20 @@ function Footer() {
             <h4 className="text-white font-bold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-gold-400" />
+                <Phone className="w-4 h-4 text-gold-400 shrink-0" />
                 <span>(615) 555-0147</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-gold-400" />
-                <span>hello@harmonymusicacademy.com</span>
+                <Mail className="w-4 h-4 text-gold-400 shrink-0" />
+                <span className="break-all">hello@harmonymusicacademy.com</span>
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-gold-400" />
-                <span>Mon-Fri: 9am-8pm</span>
+                <Clock className="w-4 h-4 text-gold-400 shrink-0" />
+                <span>Mon–Fri: 9am–8pm</span>
               </li>
               <li className="flex items-start gap-2">
-                <Clock className="w-4 h-4 text-gold-400 mt-0.5" />
-                <span>Sat: 9am-5pm | Sun: 12-5pm</span>
+                <Clock className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
+                <span>Sat: 9am–5pm | Sun: 12–5pm</span>
               </li>
             </ul>
           </div>
